@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates a common issue where specificity conflicts lead to unexpected styling results.  The `id` selector on the `#myElement` is overridden by the more specific class selector `.myClass` on the `div` element, which contains the `#myElement`.
+
+```css
+#myElement {
+  color: blue;
+}
+
+.myClass div {
+  color: red;
+}
+
+<div class="myClass">
+  <div id="myElement">
+    This text should be blue, but is red due to specificity.
+  </div>
+</div>
+```
